@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Base64 Decoder</title>
+</head>
+<body>
+    <h2>Base64 Decoder</h2>
+    <form method="post" id="Base64Input">
+        <label for="encoded_text" id="title">Base64 Encoded String</label>
+        <br>
+        <input type="text" name="encoded_text" required id="Base64Encode">
+        <br>
+        <button type="submit" id="Base64Btn">Decode</button>
+    </form>
+
+    <div id="decodeContainer">
+        {% if decoded_text %}
+            <p>Decode Result <br><strong>{{ decoded_text }}</strong></p>
+        {% endif %}
+    </div>
+
+    {% if error %}
+        <p style="color: red;">ERROR: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
