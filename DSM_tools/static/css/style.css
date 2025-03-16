@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px; 
+    background-color:cadetblue;
+}
+
+textarea { 
+    width: 80%;
+    height: 100px;
+    margin: 10px 0; 
+}
+
+pre { 
+    text-align: left; background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px; 
+}.error { color: red; }.valid { color: green; }
+
+h2 {
+    color:chartreuse;
+    height: 7vh;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 50px;
+}
+
+#secret_key_input {
+    width: 200px;
+    height: 20px;
+}
+
+#decodeBtn, #encodeBtn {
+    width: 200px;
+    height: 40px;
+    background-color:greenyellow;
+    border-color:black;
+    margin-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#EncodeHeader {
+    height: 20vh;
+}
+
+#Base64Input {
+    padding-top: 10%;
+}
+
+#title {
+    font-size: 35px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#Base64Encode {
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 2%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#Base64Btn {
+    width: 30%;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 2%;
+    font-size: 20px;
+    background-color: aquamarine;
+    border-color: greenyellow;
+}
+
+#decodeContainer {
+    margin-top: 10%;
+}
+
+p {
+    font-size: 20px;
+}
+
+strong {
+    color: darkblue;
+}
