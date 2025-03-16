@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>JWT 인코더 & 디코더</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h2>JWT Encode & Decode</h2>
+
+    <h3 style="margin-top: 3%;">🔍 JWT Decode</h3>
+    <form method="POST">
+        <textarea name="jwt_token" placeholder="여기에 JWT를 입력하세요" style="font-size: 16px;"></textarea>
+        <br>
+        <input type="text" name="secret_key" placeholder="(선택) Secret Key 입력" id="secret_key_input">
+        <br>
+        <input type="hidden" name="action" value="decode">
+        <button type="submit" id="decodeBtn">Decode</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if decoded_data %}
+        <h3>Header</h3>
+        <pre>{{ decoded_data.header | tojson(indent=4) }}</pre>
+
+        <h3>Payload</h3>
+        <pre>{{ decoded_data.payload | tojson(indent=4) }}</pre>
+
+        <h3>Signature</h3>
+        <pre>{{ decoded_data.signature }}</pre>
+
+        {% if decoded_data.signature_valid is not none %}
+            <h3>Signature 검증 결과</h3>
+            <p class="{% if decoded_data.signature_valid == True %}valid{% else %}error{% endif %}">
+                {% if decoded_data.signature_valid == True %}
+                    ✅ 유효한 서명입니다!
+                {% elif decoded_data.signature_valid == "Expired" %}
+                    ⏳ 서명이 만료되었습니다.
+                {% else %}
+                    ❌ 서명이 올바르지 않습니다!
+                {% endif %}
+            </p>
+        {% endif %}
+    {% endif %}
+    <hr>
+
+    <h3 style="padding-top: 5%;">✍️ JWT Encode</h3>
+    <form method="POST">
+        <textarea name="header" placeholder='{"alg": "HS256", "typ": "JWT"}'></textarea>
+        <br>
+        <textarea name="payload" placeholder='{"user": "admin"}'></textarea>
+        <br>
+        <input type="text" name="secret_key" placeholder="Secret Key 입력" required id="secret_key_input">
+        <br>
+        <input type="number" name="exp_time" placeholder="(선택) Exp 시간 (초)" id="secret_key_input">
+        <br>
+        <input type="hidden" name="action" value="encode">
+        <button type="submit" id="encodeBtn">Encode</button>
+    </form>
+
+    {% if encoded_token %}
+        <h3>🔐 생성된 JWT</h3>
+        <pre>{{ encoded_token }}</pre>
+    {% endif %}
+
+</body>
+</html>
