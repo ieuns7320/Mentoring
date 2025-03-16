@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header {
+    background-color: aliceblue;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+#homeBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 14pt;
+    color: gray;
+}
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+}
+input {
+    padding: 20px;
+    font-size: 20px;
+}
