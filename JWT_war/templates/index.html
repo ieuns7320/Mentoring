@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple SQL Injection</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+    <script src="../static/js/action.js"></script>
+    <div id="header">
+        <h1 style="position: relative; left: 10%;">DSM Wargame</h1>
+        <button id="loginBtn" onclick="location.href='/login'"><strong>Login</strong></button>
+    </div>
+    <div id="body">
+        <div id="ruleBox">
+            <h1 id="ruleTitle">Rule</h1>
+            <div id="content">
+                <p style="font-size: 16pt;"><strong>해당 문제는 admin level로 /flag 페이지로 이동하는 것입니다. <br><br>Vulnerability : JWT</strong></p>
+            </div>
+            <div id="levelContainer">
+                <p>your level is {{ level }}</p>
+            </div>
+            <div id="secretContainer">
+                <button id="secretBtn" onclick="secret()" disabled>secret?</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
