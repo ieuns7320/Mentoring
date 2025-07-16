@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>level 1</title>
+</head>
+<body>
+    <h1>level 1</h1>
+
+    <form id="answerForm" method="POST">
+        <input type="text" id="answer1" name="answer1" required>
+        <input type="submit" id="submitBtn" value="submit">
+    </form>
+    {% if result is defined and result == False %}
+        <script>alert('Fail!');</script>
+    {% endif %}
+</body>
+</html>
