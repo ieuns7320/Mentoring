@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Final</title>
+</head>
+<body>
+    <h1>Level 3</h1>
+    <form method="POST">
+        <button id="clickBtn" onclick="click()">Click me!</button>
+    </form>
+
+    <script>
+        const btn = document.getElementById('clickBtn');
+        const body = document.body;
+        const padding = 20;
+
+        btn.addEventListener('mouseenter', () => {
+            const maxX = window.innerWidth - btn.offsetWidth - padding;
+            const maxY = window.innerHeight - btn.offsetHeight - padding;
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            btn.style.left = randomX + 'px';
+            btn.style.top = randomY + 'px';
+
+        function click() {
+            location.href='./flag'
+        }
+        });
+    </script>
+</body>
+</html>
