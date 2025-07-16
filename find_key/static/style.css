@@ -1,0 +1,123 @@
+/* 전체 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 2rem;
+    font-size: 50px;
+}
+
+#explain {
+    font-size: 30px;
+
+}
+
+/* ----------- Index CSS ----------- */
+
+#gameRuleContainer {
+    background-color: grey;
+    height: 50vh;
+    width: 60vw;
+
+    display: flex;
+    flex-direction: column;      /* ← 세로로 쌓이도록 변경 */
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#gameStartBtnContainer {
+    padding-top: 5%;
+}
+
+#gameStartBtn {
+    background-color: white;
+    border: none;
+    width: 60vw;
+    height: 70px;
+    border-radius: 5px;
+}
+
+#Title {
+    color: white;
+    font-size: 30px;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px  1px 0 black,
+    1px  1px 0 black;
+    margin-bottom: 5%;
+}
+
+#first, #second, #third {
+    text-shadow:
+    -1px -1px 0 gray,
+    1px -1px 0 gray,
+    -1px  1px 0 gray,
+    1px  1px 0 gray;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* ----------- Index CSS ----------- */
+
+/* ----------- level 0 ----------- */
+
+#secret0 {
+    padding-top: 10%;
+    padding-right: 80%;
+    color: black;
+}
+
+#secret0-1 {
+    padding-left: 70%;
+    color: black;
+}
+
+#hintContainer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#hint {
+    font-size: 30px;
+}
+
+#answer0, #answer1, #answer2 {
+    width: 200px;
+    height: 50px;
+}
+
+#submitBtn {
+    height: 50px;
+    width: 50px;
+}
+
+
+/* ----------- level 0 ----------- */
+
+#clickBtn {
+    position: absolute;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    border-radius: 5%;
+    color: white;
+}
